@@ -59,7 +59,7 @@ This project integrates Azure OpenAI, ChromaDB, and Streamlit to generate DAX (D
 
 1. Run the Streamlit App:
     ```bash
-    streamlit run main_app_streamlit.py
+    python -m streamlit run main_app_streamlit.py
     ```
 
 2. Open the displayed URL (usually `http://localhost:8501`).
