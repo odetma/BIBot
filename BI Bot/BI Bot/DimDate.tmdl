@@ -1,0 +1,624 @@
+table DimDate
+	lineageTag: 00bfa5f1-7c02-48f1-b90b-8b5b72daa5ac
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2549166e-d389-4cdb-9887-dadb0bb8d9ce
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 50662310-4665-4ee8-9044-303ee09c49fe
+			defaultHierarchy: LocalDateTable_8b05b6a0-ea32-4f73-bdd8-8b68595c9129.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: string
+		lineageTag: 1b23831f-6797-48a4-b2e4-388ad6fc4aa3
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'This Year Selection'
+		dataType: string
+		lineageTag: 6287b7aa-6555-44db-b82f-1c083bc74ddf
+		summarizeBy: none
+		sourceColumn: This Year Selection
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuarterNumOfYear
+		dataType: double
+		lineageTag: d343bcab-261b-4733-ac50-a658f20f035e
+		summarizeBy: sum
+		sourceColumn: QuarterNumOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column QuarterName
+		dataType: string
+		lineageTag: 2e87e9f4-8b66-4e29-9663-01ce287e3e27
+		summarizeBy: none
+		sourceColumn: QuarterName
+
+		annotation SummarizationSetBy = Automatic
+
+	column HalfOfYearNum
+		dataType: double
+		lineageTag: 57c0fb23-a55a-4a71-a4d2-26e7b354c9ad
+		summarizeBy: sum
+		sourceColumn: HalfOfYearNum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column HalfOfYearName
+		dataType: string
+		lineageTag: c4aa2f73-f0f4-4aac-b3ba-d8b29621d04a
+		summarizeBy: none
+		sourceColumn: HalfOfYearName
+
+		annotation SummarizationSetBy = Automatic
+
+	column HalfOfCalendarYear
+		dataType: string
+		lineageTag: 6a44ad8c-fe16-4746-b064-2069b0d06225
+		summarizeBy: none
+		sourceColumn: HalfOfCalendarYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column HalfOfCalendarYearSum
+		dataType: double
+		lineageTag: 34b6eab3-6bf6-4005-92ce-b8b787843232
+		summarizeBy: sum
+		sourceColumn: HalfOfCalendarYearSum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MonthNumberOfYear
+		dataType: double
+		lineageTag: 6b812ba7-2a78-497b-b88a-8b8a76cf7576
+		summarizeBy: sum
+		sourceColumn: MonthNumberOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DayOfMonth
+		dataType: double
+		lineageTag: 71a2cb51-575f-4d36-b6c2-45711415a235
+		summarizeBy: sum
+		sourceColumn: DayOfMonth
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DateInt
+		dataType: double
+		lineageTag: 5d4c21d0-b669-4774-9777-21d2db2a1cfa
+		summarizeBy: sum
+		sourceColumn: DateInt
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MonthName
+		dataType: string
+		lineageTag: a53f9852-caa3-4fca-a030-d2ba9b5c9e90
+		summarizeBy: none
+		sourceColumn: MonthName
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthInCalendarName
+		dataType: string
+		lineageTag: 41c77bae-f2d7-459c-91db-5401f123482f
+		summarizeBy: none
+		sourceColumn: MonthInCalendarName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'This Month Selection'
+		dataType: string
+		lineageTag: 4c4739f2-a7a7-4ae3-86f6-465c59969424
+		summarizeBy: none
+		sourceColumn: This Month Selection
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOFWeekNum
+		dataType: double
+		lineageTag: 617594ea-a569-4ded-ab36-ada3755890bd
+		summarizeBy: sum
+		sourceColumn: DayOFWeekNum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DayOfWeekName
+		dataType: string
+		lineageTag: aaa92408-830e-4ec3-93f3-fb4c8ca126f9
+		summarizeBy: none
+		sourceColumn: DayOfWeekName
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuarterInCalendar
+		dataType: string
+		lineageTag: 0f94fd5e-4472-48b1-8fe9-c4687afcb56b
+		summarizeBy: none
+		sourceColumn: QuarterInCalendar
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekEnding
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7150b5e0-fb54-444c-970c-37215080fa9c
+		summarizeBy: none
+		sourceColumn: WeekEnding
+
+		variation Variation
+			isDefault
+			relationship: 7a903f38-6282-48ed-85a1-865ff07f831f
+			defaultHierarchy: LocalDateTable_c093ca1a-870b-44fe-889d-2b0869dca0f4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column YearMonthSum
+		dataType: double
+		lineageTag: b2b15599-c964-4c67-b9a9-79a70194b91a
+		summarizeBy: sum
+		sourceColumn: YearMonthSum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column YearQuarterSum
+		dataType: double
+		lineageTag: 789910ba-2b56-4a24-9b32-84874055ace9
+		summarizeBy: sum
+		sourceColumn: YearQuarterSum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Show Dates'
+		dataType: string
+		lineageTag: 1ed5bcac-5200-4db2-86ea-111398844b57
+		summarizeBy: none
+		sourceColumn: Show Dates
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Show Months'
+		dataType: string
+		lineageTag: 8ad02da9-0820-48c1-8003-6e67002dca7a
+		summarizeBy: none
+		sourceColumn: Show Months
+
+		annotation SummarizationSetBy = Automatic
+
+	column DaysInMonth
+		dataType: double
+		lineageTag: bdd75c11-641c-485d-801c-4759165b4b6c
+		summarizeBy: sum
+		sourceColumn: DaysInMonth
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column WeekInYear
+		dataType: double
+		lineageTag: cc011fb3-8cf7-41fc-82a2-871dcfaf813f
+		summarizeBy: sum
+		sourceColumn: WeekInYear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column WeekNum
+		dataType: string
+		lineageTag: 483a4f22-36fc-4725-88f7-6c258d4bece5
+		summarizeBy: none
+		sourceColumn: WeekNum
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonthNumber
+		dataType: double
+		lineageTag: 8e1b8fb0-5eeb-4eca-a26f-4f09a389b7f1
+		summarizeBy: sum
+		sourceColumn: YearMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Show This Year'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f5de0fb6-b901-4dad-8f2d-1643861c8cdd
+		summarizeBy: none
+		sourceColumn: Show This Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Show Last 7 Days'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f57df8b1-868b-4b1a-bf16-4fe4f236bae1
+		summarizeBy: none
+		sourceColumn: Show Last 7 Days
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Show Last 30 Days'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 4834a758-0bb2-4d8c-8bae-38e126339a80
+		summarizeBy: none
+		sourceColumn: Show Last 30 Days
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Show Last 12 Months'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9ae11c74-5ab1-4528-b2f4-0c3c7d6aff5d
+		summarizeBy: none
+		sourceColumn: Show Last 12 Months
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Show Next 12 Months'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f32bd9cc-38b4-4cd1-855c-ae944e8e9a87
+		summarizeBy: none
+		sourceColumn: Show Next 12 Months
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Show Last 6 Months'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ad43bf40-db3a-4a3d-ba86-15f0c9170ece
+		summarizeBy: none
+		sourceColumn: Show Last 6 Months
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Show Last 3 Months'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 39d1ae6d-8ce4-4455-b662-fca59f782854
+		summarizeBy: none
+		sourceColumn: Show Last 3 Months
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Show Last 2 Months'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 302cd579-0ea7-4b2f-8e72-1198463c439c
+		summarizeBy: none
+		sourceColumn: Show Last 2 Months
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Refresh Time'
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 5002ebbd-67a4-4d7b-b1b3-ed59c7dbf507
+		summarizeBy: none
+		sourceColumn: Refresh Time
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column 'Refresh Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2957600d-bef1-481e-a13e-ac2c14426aa8
+		summarizeBy: none
+		sourceColumn: Refresh Date
+
+		variation Variation
+			isDefault
+			relationship: eb9afa00-0256-41cc-a0aa-4e8083def354
+			defaultHierarchy: LocalDateTable_6f8965e3-73d9-427d-9fac-d9c8b0614a84.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FirstDayOfMonth
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 650c3e2d-443e-4dca-9df8-127136eba9a3
+		summarizeBy: none
+		sourceColumn: FirstDayOfMonth
+
+		variation Variation
+			isDefault
+			relationship: ccc264e3-a935-45b9-90e8-ec19b0c20dbb
+			defaultHierarchy: LocalDateTable_45c67399-f464-41c5-8094-6b371adf9029.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column LastMonth
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f01344f3-efaf-400f-8c7e-ae4b68d49b53
+		summarizeBy: none
+		sourceColumn: LastMonth
+
+		variation Variation
+			isDefault
+			relationship: 51d52aed-b923-4e0f-b093-86f1aa7a9cdb
+			defaultHierarchy: LocalDateTable_5b9212f2-12be-4815-b828-31283a9bd523.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column LastYear
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 075d50ad-c23a-4615-91bd-ba75aeb4a9a1
+		summarizeBy: none
+		sourceColumn: LastYear
+
+		variation Variation
+			isDefault
+			relationship: 46262c19-a286-478d-b8e8-aa3f3317f126
+			defaultHierarchy: LocalDateTable_237d2f62-e837-4049-9eb5-2675e0945ace.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column LastMonth_Full
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 9251fbe6-6b6d-4ebf-8653-65234fcbdf76
+		summarizeBy: none
+		sourceColumn: LastMonth_Full
+
+		variation Variation
+			isDefault
+			relationship: 21263d96-8337-47c1-8e74-4ef6b2aca761
+			defaultHierarchy: LocalDateTable_7bbc123e-695b-4987-81d6-7deade4e0244.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column LastYear_Full
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8b7b2546-b14c-4ffc-9f68-4a7b7f66fcbc
+		summarizeBy: none
+		sourceColumn: LastYear_Full
+
+		variation Variation
+			isDefault
+			relationship: 78a96aaa-e7e3-4b8f-90a6-ff98cd97f65c
+			defaultHierarchy: LocalDateTable_8e64ba43-7dc0-4666-badf-41a44c6f36ca.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Is Working Day'
+		dataType: double
+		lineageTag: f2f3a032-002f-47d5-93e9-13440ca82017
+		summarizeBy: sum
+		sourceColumn: Is Working Day
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IsHistory
+		dataType: int64
+		formatString: 0
+		lineageTag: 9453bba5-4804-4d3e-9c34-3785a8b338e7
+		summarizeBy: sum
+		sourceColumn: IsHistory
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is History To Today'
+		dataType: int64
+		formatString: 0
+		lineageTag: f80c43d7-e289-4207-b3bc-5a77d27ac13a
+		summarizeBy: sum
+		sourceColumn: Is History To Today
+
+		annotation SummarizationSetBy = Automatic
+
+	column UntilNextMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: 6cf1b277-eb48-4a26-98a4-888731e8a8d6
+		summarizeBy: sum
+		sourceColumn: UntilNextMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column UntilThisMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: 22e1baf3-b01d-4e7d-bffd-bf072dc06e5a
+		summarizeBy: sum
+		sourceColumn: UntilThisMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column UntilToday
+		dataType: int64
+		formatString: 0
+		lineageTag: ef9e98e3-c284-4bcd-b0a1-b92a045cda0d
+		summarizeBy: sum
+		sourceColumn: UntilToday
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'This Week Selection'
+		dataType: string
+		lineageTag: 883b95a4-0281-44ff-95f3-cac4795ea2ee
+		summarizeBy: none
+		sourceColumn: This Week Selection
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'יום בשבוע'
+		dataType: string
+		lineageTag: 825392af-44ba-4e99-a873-159648a9098d
+		summarizeBy: none
+		sourceColumn: יום בשבוע
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimDate = m
+		mode: import
+		source = ```
+				let 
+				 
+				TodayDate=DateTime.Date(DateTime.LocalNow()),
+				EndDate = Date.EndOfMonth(DateTime.Date(DateTime.LocalNow())),
+				StartDate=#date(2020,01,01),
+				DayCount = Duration.Days(Duration.From(EndDate - StartDate))+1,
+				Culture ="en-US", Source = List.Dates(StartDate,DayCount,#duration(1,0,0,0)),
+				TableFromList = Table.FromList(Source, Splitter.SplitByNothing()),    
+				ChangedType = Table.TransformColumnTypes(TableFromList,{{"Column1", type date}}),
+				RenamedColumns = Table.RenameColumns(ChangedType,{{"Column1", "Date"}}),
+				InsertYear = Table.AddColumn(RenamedColumns, "Year", each Date.Year([Date]), type number),
+				    #"Added This Year" = Table.AddColumn(InsertYear, "This Year Selection", each if  
+				Date.IsInCurrentYear([Date]) then
+				(if Culture ="he-IL" then "שנה נוכחית" else  "This Year")
+				else
+				[Year]),
+				InsertQuarter = Table.AddColumn( #"Added This Year", "QuarterNumOfYear", each Date.QuarterOfYear([Date]), type number),
+				InsertQuarterName = Table.AddColumn(InsertQuarter , "QuarterName" , each "Q-" & Number.ToText([QuarterNumOfYear])),
+				InsertHalfOfYearNum = Table.AddColumn(InsertQuarterName , "HalfOfYearNum", each  Number.RoundDown(([QuarterNumOfYear]+1)/2), type number),
+				InsertHalfOfYearName = Table.AddColumn(InsertHalfOfYearNum ,"HalfOfYearName",each "H-" & Number.ToText([HalfOfYearNum])),
+				InsertHalfOfCalendarYear = Table.AddColumn(InsertHalfOfYearName ,"HalfOfCalendarYear", each  "H" & Number.ToText([HalfOfYearNum]) & " " & Number.ToText([Year])),
+				InsertHalfOfCalendarYearSum = Table.AddColumn( InsertHalfOfCalendarYear ,"HalfOfCalendarYearSum",each [Year]*10 +[HalfOfYearNum], type number),
+				InsertMonth = Table.AddColumn(InsertHalfOfCalendarYearSum , "MonthNumberOfYear", each Date.Month([Date]), type number),
+				InsertDay = Table.AddColumn(InsertMonth, "DayOfMonth", each Date.Day([Date]), type number),
+				InsertDayInt = Table.AddColumn(InsertDay, "DateInt", each [Year] * 10000 + [MonthNumberOfYear] * 100 + [DayOfMonth], type number),
+				InsertMonthName = Table.AddColumn(InsertDayInt, "MonthName", each Date.ToText([Date], "MMMM", Culture), type text),
+				InsertCalendarMonth = Table.AddColumn(InsertMonthName, "MonthInCalendarName", each (try(Text.Range([MonthName],0,3)) otherwise [MonthName]) & " " & Number.ToText([Year])),
+				    #"Added This Month Selection" = Table.AddColumn(InsertCalendarMonth, "This Month Selection", each if Date.IsInCurrentMonth([Date]) then
+				(
+				if Culture ="he-IL" then "חודש נוכחי" else
+				"This Month"
+				)
+				else [MonthInCalendarName]),
+				InsertDayWeek = Table.AddColumn(#"Added This Month Selection", "DayOFWeekNum", each 1+Date.DayOfWeek([Date]), type number),
+				InsertDayName = Table.AddColumn(InsertDayWeek, "DayOfWeekName", each Text.Trim(Text.Replace(Date.ToText([Date], "dddd", Culture),"יום","")," "), type text),
+				    InsertCalendarQtr = Table.AddColumn(InsertDayName, "QuarterInCalendar", each "Q" & Number.ToText([QuarterNumOfYear]) & " " & Number.ToText([Year])),
+				InsertWeekEnding = Table.AddColumn(InsertCalendarQtr, "WeekEnding", each Date.EndOfWeek([Date]), type date),
+				InsertYearMonthSum = Table.AddColumn(InsertWeekEnding,"YearMonthSum", each [Year]*100 +[MonthNumberOfYear], type number),
+				InsertYearQuarterSum = Table.AddColumn(InsertYearMonthSum ,"YearQuarterSum", each [Year]*10 +[QuarterNumOfYear], type number), InsertDaySelection = 
+				if Culture="he-IL" 
+				then 
+				(Table.AddColumn(InsertYearQuarterSum , "Show Dates", each (if Date.IsInCurrentDay(Date.AddDays([Date],1)) then "אתמול" else (if  Date.IsInCurrentDay([Date]) then "היום" else "שאר התאריכים"))))
+				else 
+				(Table.AddColumn(InsertYearQuarterSum , "Show Dates", each (if Date.IsInCurrentDay(Date.AddDays([Date],1)) then "Yesterday" else (if  Date.IsInCurrentDay([Date]) then "Today" else "Other"))))
+				,  InsertMonthSelection = 
+				if Culture="he-IL" 
+				then 
+				(Table.AddColumn(InsertDaySelection , "Show Months", each (if Date.IsInPreviousMonth([Date]) then "חודש שעבר" else (if  Date.IsInCurrentMonth([Date]) then "החודש" else "שאר התאריכים"))))
+				else
+				(Table.AddColumn(InsertDaySelection , "Show Months", each (if Date.IsInPreviousMonth([Date]) then "Last Month" else (if  Date.IsInCurrentMonth([Date]) then "This Month" else "Other"))))
+				, InsertDaysInMonth =Table.AddColumn(InsertMonthSelection ,"DaysInMonth" , each Date.DaysInMonth([Date]) ,type number),
+				InsertWeekInYear =  Table.AddColumn(InsertDaysInMonth ,"WeekInYear", each [Year]*100+Date.WeekOfYear([Date]),type number),
+				    #"Added Custom" = Table.AddColumn(InsertWeekInYear, "WeekNum", each Date.WeekOfYear([Date])),
+				InsertYearMonthNumber = Table.AddColumn(#"Added Custom", "YearMonthNumber",each ([Year]-Date.Year(StartDate))*12+[MonthNumberOfYear], type number), IsInThisYear =Table.AddColumn(InsertYearMonthNumber ,"Show This Year" , each  Date.IsInCurrentYear([Date]) , type logical),
+				ShowLast7Days = Table.AddColumn( IsInThisYear, "Show Last 7 Days", each (Duration.Days(Duration.From(DateTime.Date(DateTime.LocalNow()) - [Date]))) <=7 and (Duration.Days(Duration.From(DateTime.Date(DateTime.LocalNow()) - [Date]))) >=0 , type logical),
+				ShowLast30Days = Table.AddColumn( ShowLast7Days, "Show Last 30 Days", each (Duration.Days(Duration.From(DateTime.Date(DateTime.LocalNow()) - [Date]))) <=30 and (Duration.Days(Duration.From(DateTime.Date(DateTime.LocalNow()) - [Date]))) >=0 , type logical),
+				    ShowLast_12_Months = Table.AddColumn(ShowLast30Days , "Show Last 12 Months", each [Date]>=Date.AddMonths(Date.StartOfMonth(TodayDate),-11),type logical),
+				    #"Show Next 12 Months" = Table.AddColumn(ShowLast_12_Months, "Show Next 12 Months", each [Date]<=Date.AddMonths(Date.StartOfMonth(TodayDate),12)
+				and [Date]>=TodayDate,type logical),
+				    ShowLast_6_Months = Table.AddColumn(#"Show Next 12 Months", "Show Last 6 Months", each [Date]>=Date.AddMonths(Date.StartOfMonth(TodayDate),-5),type logical),
+				ShowLast_3_Months = Table.AddColumn(ShowLast_6_Months, "Show Last 3 Months", each [Date]>=Date.AddMonths(Date.StartOfMonth(TodayDate),-2),type logical),
+				    ShowLast_2_Months = Table.AddColumn(ShowLast_3_Months, "Show Last 2 Months", each [Date]>=Date.AddMonths(Date.StartOfMonth(TodayDate),-1)),
+				    LastRefreshTime = Table.AddColumn(ShowLast_2_Months ,"Refresh Time", each  Time.From(DateTime.LocalNow()),type time),
+				LastRefreshDate = Table.AddColumn(LastRefreshTime ,"Refresh Date", each  DateTime.Date(DateTime.LocalNow()),type date),
+				FisrtDayOfMonth = Table.AddColumn( LastRefreshDate ,"FirstDayOfMonth", each Date.StartOfMonth([Date])  ,type date),      #"Added Last Month" = Table.AddColumn(#"FisrtDayOfMonth", "LastMonth", each if [Date]=Date.EndOfMonth([Date]) then 
+				(if Date.Day([Date])=Date.Day(Date.EndOfMonth(Date.AddMonths([Date],-1))) then 
+				Date.AddMonths([Date],-1)
+				else
+				Date.EndOfMonth(Date.AddMonths([Date],-1)))
+				else 
+				Date.AddMonths([Date],-1),type date), 
+				    #"Added Last Year" = Table.AddColumn(#"Added Last Month", "LastYear", each if [Date]=Date.EndOfMonth([Date]) then 
+				(if Date.Day([Date])=Date.Day(Date.EndOfMonth(Date.AddYears([Date],-1))) then 
+				Date.AddYears([Date],-1)
+				else
+				Date.EndOfMonth(Date.AddYears([Date],-1)))
+				else 
+				Date.AddYears([Date],-1),type date),
+				    #"Added Last Month - Full" = Table.AddColumn(#"Added Last Year", "LastMonth_Full", each Date.EndOfMonth([LastMonth])),
+				    #"Added Last Year - Full" = Table.AddColumn(#"Added Last Month - Full", "LastYear_Full", each Date.EndOfMonth([LastYear])), 
+				    #"Changed Type Dates Compare" = Table.TransformColumnTypes(#"Added Last Year - Full",{{"LastYear", type date}, {"LastMonth", type date}, {"LastMonth_Full", type date}, {"LastYear_Full", type date}}),
+				    #"Add Working Day" = Table.AddColumn(#"Changed Type Dates Compare", "Is Working Day", each if [DayOFWeekNum] = 6 then 0 else if [DayOFWeekNum] = 7 then 0 else 1, type number),
+				#"Added IsHistory" = Table.AddColumn(#"Add Working Day", "IsHistory", each if [Date] > TodayDate then 0 else 1 , Int64.Type),
+				    #"Added Day History category" = Table.AddColumn( #"Added IsHistory", "Is History To Today", each if
+				Date.Month([Date])*100+Date.Day([Date]) > 
+				Date.Month(TodayDate)*100 +
+				Date.Day(TodayDate)
+				then
+				0 else 1 ,  Int64.Type),
+				    UntilNextMonth = Table.AddColumn(#"Added Day History category", "UntilNextMonth", each if [Date]>Date.EndOfMonth(TodayDate) then 0 else 1,  Int64.Type),
+				    UntilThisMonth = Table.AddColumn( UntilNextMonth, "UntilThisMonth", each if [Date]<Date.StartOfMonth(TodayDate) then 1 else 0, Int64.Type),
+				    #"Added UntilToday" = Table.AddColumn(UntilThisMonth, "UntilToday", each if 
+				Date.Day([Date]) < Date.Day(TodayDate)
+				then 1 else 0),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added UntilToday",{{"UntilToday", Int64.Type}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Changed Type1",{{"Year", type text}, {"Show Last 2 Months", type logical}}),
+				    #"Added This Week Selection" = Table.AddColumn(#"Changed Type", "This Week Selection", each if Date.IsInPreviousWeek([Date]) then "Last Week" 
+				else 
+				if  Date.IsInCurrentWeek([Date]) then "This Week"
+				 else 
+				 if  Date.IsInNextWeek([Date]) then "Next Week"
+				  else
+				 Text.From( [Year]) & " - " & Text.From( [WeekNum])),
+				    #"Added יום בשבוע" = Table.AddColumn(#"Added This Week Selection", "יום בשבוע", each if [DayOFWeekNum] = 1 then "ראשון" else if [DayOFWeekNum] = 2 then "שני" else if [DayOFWeekNum] = 3 then "שלישי" else if [DayOFWeekNum] = 4 then "רביעי" else if [DayOFWeekNum] = 5 then "חמישי" else if [DayOFWeekNum] = 6 then "שישי" else "שבת")
+				in
+				    #"Added יום בשבוע"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
