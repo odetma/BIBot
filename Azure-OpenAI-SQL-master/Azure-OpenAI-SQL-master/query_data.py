@@ -18,18 +18,14 @@ CHROMA_PATH = "chroma"
 TABLE_RELATIONSHIPS = {
     "FactInternetSales": {
         "DimCustomer": "CustomerKey",
-        "DimDate": "OrderDate",
+        "DimDate": {"fact_column": "OrderDate", "dim_column": "Date"},
         "DimProduct": "ProductKey"
     },
     "FactResellerSales": {
-        "DimReseller": "ResellerKey",
-        "DimDate": "OrderDate"
-    },
-    "FactFinance": {
-        "DimAccount": "AccountKey",
-        "DimScenario": "ScenarioKey"
+        "DimDate": {"fact_column": "OrderDate", "dim_column": "Date"}
     }
 }
+
 
 def get_azure_embedding_function():
     """Returns an Azure OpenAI embedding function."""
@@ -83,14 +79,26 @@ def search_schema(query_text, top_k=5, min_score=0.5):
 
     # ✅ Step 3: Retrieve related dimension tables with key columns
     related_tables = {}
+    # ✅ Step 3: Retrieve related dimension tables with key columns
+    related_tables = {}
     if fact_table in TABLE_RELATIONSHIPS:
-        for dim_table, key_column in TABLE_RELATIONSHIPS[fact_table].items():
-            related_tables[dim_table] = [key_column]  # Only add the key column
+        for dim_table, mapping in TABLE_RELATIONSHIPS[fact_table].items():
+            if isinstance(mapping, dict):  # If it's a dictionary, it's a mapped field
+                fact_column = mapping["fact_column"]
+                dim_column = mapping["dim_column"]
+                related_tables[dim_table] = [f"{fact_column} → {dim_column}"]  # Make the relationship explicit
+
+            else:
+                related_tables[dim_table] = [mapping]  # Normal key relationships
+
 
     # ✅ Step 4: Format output for OpenAI (Avoid NULL Issues)
     formatted_schema = f"Fact Table:\n- {fact_table}: {', '.join(fact_columns)}\n\nRelated Dimension Tables:\n"
     for table, columns in related_tables.items():
-        formatted_schema += f"- {table}: {', '.join(columns)}\n"
+        if isinstance(columns, dict):
+            formatted_schema += f"- {table}: {', '.join(columns.values())}\n"
+        else:
+            formatted_schema += f"- {table}: {', '.join(columns)}\n"
 
     return formatted_schema
 

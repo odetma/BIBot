@@ -49,7 +49,7 @@ if user_message:
     if "❌" in relevant_schema_results:
         st.warning("⚠️ No relevant schema found. Try rephrasing your query.")
     else:
-        # ✅ Extract only the **top match** instead of the full schema list
+        # ✅ Extract only the top match instead of the full schema list
         top_match = relevant_schema_results.split("\n\n---\n\n")[0]
 
         st.markdown("### 📄 Top Matching Schema:")
@@ -57,19 +57,36 @@ if user_message:
 
         # ✅ Format prompt for Azure OpenAI (GPT-4o)
         formatted_prompt = f"""
-You are an AI that generates DAX queries based on the given schema.
-- Ensure the response is ALWAYS in a valid JSON format.
-- Do NOT add explanations, only return the JSON.
-- DO NOT use EMPTYTABLE().
-- If aggregating a single value, use ROW() instead.
-- If grouping is needed, use SUMMARIZECOLUMNS() properly.
-        Schema:
+        You are an AI specialized in generating DAX (Data Analysis Expressions) queries based on the provided schema. Adhere to the following guidelines to ensure optimal performance and accuracy:
+
+        ### General Guidelines:
+        - Valid JSON Output: Always return the DAX query encapsulated within a JSON object as the value for the "query" key.
+        - No Explanations: Provide only the JSON-formatted DAX query without additional commentary.
+
+        ### DAX Best Practices:
+
+        - When filtering, always use dimension tables (`DimTable`) instead of fact tables (`FactTable`) for example FILTER('FactInternetSales',YEAR('DimDate'[Date]) = 2011)
+
+        - Begin every DAX query with the `EVALUATE` statement to execute the table expression.
+
+        - Do not use `RELATED()` inside `FILTER()`. Instead, apply filters directly on the related dimension tables.
+
+        - For grouped aggregations, prefer `SUMMARIZECOLUMNS()` over `SUMMARIZE()`.
+
+        - When retrieving specific columns without grouping, use `SELECTCOLUMNS()`.
+
+        - Use `DISTINCT()` and `VALUES()` appropriately to retrieve unique values and ensure accuracy.
+
+        ### Schema
         {top_match}
 
-        Respond with a valid DAX query in JSON format:
+        ### Example Query Format
+        Respond in valid JSON:
+        ```json
         {{
-            "query": "EVALUATE SUMMARIZECOLUMNS('FactInternetSales'[SalesAmount], \"Total Sales\", SUM('FactInternetSales'[SalesAmount]))"
+            "query": "EVALUATE SUMMARIZECOLUMNS('DimDate'[Date], \"Total Sales\", SUM('FactInternetSales'[SalesAmount]))"
         }}
+
         """
 
         # ✅ Get AI-generated DAX query
@@ -97,8 +114,8 @@ You are an AI that generates DAX queries based on the given schema.
                     st.error(f"⚠️ Error executing DAX query: {e}")
 
             except json.JSONDecodeError:
-                 st.error(f"❌ JSON Parsing Error: {e}")
+                 st.error(f"❌ JSON Parsing Error: {str(e)}")
                  st.text(f"Raw response:\n{cleaned_response}")  # Show the problematic response
 
         except Exception as e:
-            st.error(f"❌ Error generating DAX query: {e}")
+            st.error(f"❌ Error generating DAX query: {str(e)}")
